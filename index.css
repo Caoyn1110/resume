@@ -1,0 +1,169 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: #0ea5e9;
+}
+.container {
+  width: 800px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin: 50px auto;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 50px;
+  position: relative;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  background: linear-gradient(to right, #22d3ee, #0ea5e9);
+  transform: rotate(-3deg);
+}
+.info-container {
+  display: flex;
+}
+.info {
+  flex-grow: 1;
+  margin-right: 20px;
+  display: grid;
+  grid-template-columns: 20px 280px 60px 1fr;
+  column-gap: 10px;
+}
+.info-container img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.info .name {
+  grid-area: 1/1/2/5;
+  font-size: 2em;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+.info .name span {
+  font-size: 14px;
+}
+.info-container .info .label {
+  color: #888;
+  text-align: right;
+}
+
+.block {
+  margin: 30px 0;
+}
+.block .block-title {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+.block-content {
+  padding: 20px 0;
+  position: relative;
+}
+.time-line::before {
+  content: "";
+  width: 2px;
+  height: 80%;
+  left: 0;
+  top: 20px;
+  position: absolute;
+  background: #22d3ee;
+}
+.time-line .item {
+  padding-left: 20px;
+  margin: 20px 0;
+  position: relative;
+}
+.time-line .item::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #0ea5e9;
+  left: -6px;
+  top: 2px;
+}
+.block .gray {
+  color: #888;
+}
+.block .detial {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #888;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  row-gap: 30px;
+}
+.skills .item {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #f0fdff;
+  text-align: center;
+  line-height: 130px;
+  position: relative;
+}
+.skills .item::before {
+  content: "";
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 5px solid #c3f1f8;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 0;
+}
+.skills .item.level1::before {
+  border-top-color: #0ea5e9;
+}
+.skills .item.level2::before {
+  border-top-color: #0ea5e9;
+  border-right-color: #0ea5e9;
+}
+.skills .item.level3::before {
+  border-top-color: #0ea5e9;
+  border-right-color: #0ea5e9;
+  border-bottom-color: #0ea5e9;
+}
+.skills .item.level4::before {
+  border-color: #0ea5e9;
+}
+.block .projects {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.projects h3 {
+  margin-top: 20px;
+  grid-area: 1/1/2/3;
+}
+.projects p {
+  margin-bottom: 1em;
+}
+.block .intro {
+  font-size: 16px;
+  line-height: 2;
+}
